@@ -215,18 +215,16 @@ const PostDetail = ({ postId }) => {
     if (!newComment.author || !newComment.email || !newComment.content) return;
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${postId}/comments`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newComment),
+      // Save to Firebase
+      const commentsRef = ref(database, `comments/${postId}`);
+      await push(commentsRef, {
+        author: newComment.author,
+        email: newComment.email,
+        content: newComment.content,
+        created_at: new Date().toISOString()
       });
 
-      if (response.ok) {
-        setNewComment({ author: '', email: '', content: '' });
-        fetchComments();
-      }
+      setNewComment({ author: '', email: '', content: '' });
     } catch (error) {
       console.error('Error posting comment:', error);
     }
