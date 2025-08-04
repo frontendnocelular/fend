@@ -514,7 +514,7 @@ const App = () => {
 };
 
 const PostDetailRoute = () => {
-  const { id } = window.location.pathname.split('/').pop();
+  const { id } = useParams();
   return <PostDetail postId={id} />;
 };
 
