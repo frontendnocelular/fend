@@ -191,9 +191,20 @@ const PostDetail = ({ postId }) => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${postId}/comments`);
-      const data = await response.json();
-      setComments(data);
+      // Fetch from Firebase
+      const commentsRef = ref(database, `comments/${postId}`);
+      onValue(commentsRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const commentsArray = Object.keys(data).map(key => ({
+            id: key,
+            ...data[key]
+          }));
+          setComments(commentsArray.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
+        } else {
+          setComments([]);
+        }
+      });
     } catch (error) {
       console.error('Error fetching comments:', error);
     }
