@@ -87,7 +87,7 @@ async def get_categories():
 
 @app.get("/api/posts/{post_id}/comments")
 async def get_comments(post_id: str):
-    comments = await db.comments.find({"post_id": post_id}).to_list(100)
+    comments = await db.comments.find({"post_id": post_id}, {"_id": 0}).to_list(100)
     return comments
 
 @app.post("/api/posts/{post_id}/comments")
