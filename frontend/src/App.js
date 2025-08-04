@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import { Search, Moon, Sun, Menu, X, Calendar, User, Tag, ExternalLink } from 'lucide-react';
+import { database } from './firebase';
+import { ref, push, onValue, off } from 'firebase/database';
 import './App.css';
 
 const SplashScreen = ({ onComplete }) => {
