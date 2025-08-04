@@ -66,7 +66,7 @@ async def get_posts(
 
 @app.get("/api/posts/{post_id}")
 async def get_post(post_id: str):
-    post = await db.posts.find_one({"id": post_id})
+    post = await db.posts.find_one({"id": post_id}, {"_id": 0})
     if not post:
         raise HTTPException(status_code=404, detail="Post not found")
     return post
