@@ -61,7 +61,7 @@ async def get_posts(
             {"tags": {"$in": [search]}}
         ]
     
-    posts = await db.posts.find(query).skip(skip).limit(limit).to_list(limit)
+    posts = await db.posts.find(query, {"_id": 0}).skip(skip).limit(limit).to_list(limit)
     return posts
 
 @app.get("/api/posts/{post_id}")
