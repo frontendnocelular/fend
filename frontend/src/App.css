@@ -662,10 +662,36 @@ body {
 
 .categories-page,
 .about-page,
-.contact-page {
+.contact-page,
+.terms-page,
+.privacy-page {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+
+.terms-content,
+.privacy-content {
+  margin-top: 2rem;
+  line-height: 1.8;
+}
+
+.terms-content h3,
+.privacy-content h3 {
+  color: var(--primary-color);
+  margin: 2rem 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.terms-content ul,
+.privacy-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.terms-content li,
+.privacy-content li {
+  margin-bottom: 0.5rem;
 }
 
 .categories-grid {
