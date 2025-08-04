@@ -399,6 +399,65 @@ const ContactPage = () => {
   );
 };
 
+const TermsPage = () => {
+  return (
+    <div className="terms-page">
+      <h1>Termos de Uso</h1>
+      <div className="terms-content">
+        <h3>1. Aceitação dos Termos</h3>
+        <p>Ao acessar e usar o Frontend no Celular, você concorda em cumprir estes termos de uso.</p>
+        
+        <h3>2. Uso do Conteúdo</h3>
+        <p>O conteúdo deste blog é fornecido apenas para fins educacionais. Você pode compartilhar e referenciar nossos artigos, desde que seja feita a devida atribuição.</p>
+        
+        <h3>3. Comentários</h3>
+        <p>Ao postar comentários, você concorda em não publicar conteúdo ofensivo, spam ou que viole direitos de terceiros.</p>
+        
+        <h3>4. Propriedade Intelectual</h3>
+        <p>Todo o conteúdo original é de propriedade do Frontend no Celular (Alírio Neto). Códigos de exemplo podem ser usados livremente em projetos pessoais e comerciais.</p>
+        
+        <h3>5. Limitação de Responsabilidade</h3>
+        <p>As informações fornecidas são para fins educacionais. Não nos responsabilizamos por eventuais problemas decorrentes do uso das técnicas apresentadas.</p>
+      </div>
+    </div>
+  );
+};
+
+const PrivacyPage = () => {
+  return (
+    <div className="privacy-page">
+      <h1>Política de Privacidade</h1>
+      <div className="privacy-content">
+        <h3>1. Informações Coletadas</h3>
+        <p>Coletamos apenas as informações necessárias para o funcionamento dos comentários: nome e email.</p>
+        
+        <h3>2. Uso das Informações</h3>
+        <p>As informações coletadas são usadas exclusivamente para:</p>
+        <ul>
+          <li>Exibir comentários no blog</li>
+          <li>Moderação de conteúdo</li>
+          <li>Comunicação sobre respostas aos seus comentários</li>
+        </ul>
+        
+        <h3>3. Compartilhamento de Dados</h3>
+        <p>Não compartilhamos, vendemos ou transferimos suas informações pessoais para terceiros.</p>
+        
+        <h3>4. Segurança</h3>
+        <p>Implementamos medidas de segurança adequadas para proteger suas informações pessoais.</p>
+        
+        <h3>5. Seus Direitos</h3>
+        <p>Você tem o direito de solicitar a remoção de seus comentários e dados pessoais entrando em contato conosco.</p>
+        
+        <h3>6. Cookies</h3>
+        <p>Utilizamos cookies apenas para melhorar sua experiência de navegação, como lembrar suas preferências de tema.</p>
+        
+        <h3>7. Alterações na Política</h3>
+        <p>Esta política pode ser atualizada periodicamente. Recomendamos verificar esta página regularmente.</p>
+      </div>
+    </div>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="footer">
