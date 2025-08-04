@@ -77,7 +77,7 @@ body {
   color: white;
   z-index: 2;
   opacity: 0;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Baloo 2';
   transition: var(--transition);
 }
 
